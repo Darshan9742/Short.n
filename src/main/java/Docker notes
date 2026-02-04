@@ -1,0 +1,8 @@
+docker run -d --name redis -p 6379:6379 redis:7
+
+What just happened (slow explanation):
+    docker run      →   create + start a container
+    -d              →   run in background
+    --name redis    →   container name (easy to refer)
+    -p 6379:6379    → map Redis port to your PC
+    redis:7         → Redis software
