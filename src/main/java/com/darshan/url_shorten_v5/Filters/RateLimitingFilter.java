@@ -27,6 +27,12 @@ public class RateLimitingFilter extends OncePerRequestFilter {
             HttpServletResponse response,
             FilterChain filterChain
     ) throws ServletException, IOException {
+
+        if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
         String ip = ipExtractor.extractIp(request);
         String path = request.getRequestURI();
 
