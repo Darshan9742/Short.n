@@ -25,14 +25,6 @@ public class UrlShotnerController {
         this.urlService = urlServiceImpl;
     }
 
-    //Just for testing
-//    @GetMapping("/db-test")
-//    public String dbTest() {
-//        return urlRepository.count() + "";
-//    }
-
-
-
 
     @PostMapping("/shorten")
     public ResponseEntity<UrlResponseDto> shortenUrl(@RequestBody UrlRequestDto req) {

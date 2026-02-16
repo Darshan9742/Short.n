@@ -18,7 +18,7 @@ public class RateLimitService {
             return redisTokenBucketService.allow(
                     ip + ":shorten",
                     6,
-                    0.5, //0.15tokens per second
+                    0.5, //0.5tokens per second
                     1
             );
         }
