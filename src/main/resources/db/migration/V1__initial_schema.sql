@@ -10,7 +10,7 @@ CREATE TABLE urls (
     UNIQUE KEY uk_shorten_url (shorten_url),
 
     INDEX idx_expires_at (expires_at),
-    INDEX idx_status (statdus)
+    INDEX idx_status (status)
 
 ) ENGINE=InnoDB
   DEFAULT CHARSET=utf8mb4
