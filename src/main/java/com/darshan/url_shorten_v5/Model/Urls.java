@@ -25,6 +25,9 @@ public class Urls {
     @Column(unique = true)
     private String shortenUrl;
 
+    @Column(name = "original_url_hash", length = 64)
+    private String originalUrlHash;
+
     private LocalDateTime createdAt;
 
     private LocalDateTime expiresAt;
